@@ -28,7 +28,7 @@ future:
 
 ## Configuration
 
-Map a copy the of configuration file **[config.php.example](https://github.com/RungeICT/looking-glass/blob/master/config.php.example)** file to **/var/www/html/config.php**
+Map a copy the of configuration file **[config.php.example](https://github.com/respawner/looking-glass/blob/master/config.php.example)** file to **/var/www/html/config.php**
 file. It contains all the values (PHP variables) used to customize the looking
 glass.
 
@@ -40,7 +40,7 @@ docker run -d -p 80:80 -v /config.php:/var/www/html/config.php --name="looking-g
 
 ## Documentation
 
-An up-to-date (hopefully) documentation is available in the **docs/**
+An up-to-date (hopefully) documentation is available in the **https://github.com/respawner/looking-glass/tree/master/docs/**
 directory. It gives enough details to setup the looking glass, to configure it
 and to prepare your routers.
 
@@ -57,7 +57,7 @@ make some pull requests.
 
 If you use this looking glass in your company, please drop me a mail. I would
 be glad to know that this project was helpful for you, and I will update our
-[documentation](docs/our_users.md) to include your company inside the list of
+[documentation](https://github.com/respawner/looking-glass/tree/master/docs/our_users.md) to include your company inside the list of
 users if you want me to.
 
 ## Thanks
