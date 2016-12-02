@@ -1,15 +1,15 @@
 FROM php:apache
 RUN apt-get update \
-  apt-get -y install bash git ssh libmcrypt-dev openssl libsodium-dev libgmp-dev libgmp3-dev \
-  ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
-  docker-php-ext-install -j$(nproc) mcrypt gmp \
-  pecl install libsodium \
-  docker-php-ext-enable libsodium \
-  git clone https://github.com/respawner/looking-glass.git --branch looking-glass-1.3.0 --single-branch /var/www/html/ \
-  apt-get purge -y --auto-remove git \
-  mkdir -p /var/log/ \
-  touch /var/log/looking-glass.log \
-  chown www-data /var/log/looking-glass.log
+  && apt-get -y install bash git ssh libmcrypt-dev openssl libsodium-dev libgmp-dev libgmp3-dev \
+  && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
+  && docker-php-ext-install -j$(nproc) mcrypt gmp \
+  && pecl install libsodium \
+  && docker-php-ext-enable libsodium \
+  && git clone https://github.com/respawner/looking-glass.git --branch looking-glass-1.3.0 --single-branch /var/www/html/ \
+  && apt-get purge -y --auto-remove git \
+  && mkdir -p /var/log/ \
+  && touch /var/log/looking-glass.log \
+  && chown www-data /var/log/looking-glass.log
 
 
 #bcmath bz2 calendar ctype curl dba dom enchant exif fileinfo filter ftp gd gettext gmp hash iconv imap interbase intl json ldap mbstring mcrypt mysqli oci8 odbc opcache pcntl pdo 
