@@ -5,7 +5,7 @@ RUN apt-get update \
   && docker-php-ext-install -j$(nproc) mcrypt gmp \
   && pecl install libsodium \
   && docker-php-ext-enable libsodium \
-  && git clone https://github.com/respawner/looking-glass.git --branch looking-glass-1.3.0 --single-branch /var/www/html/ \
+  && git clone https://github.com/VostroNet/looking-glass.git --branch master --single-branch /var/www/html/ \
   && apt-get purge -y --auto-remove git \
   && mkdir -p /var/log/ \
   && touch /var/log/looking-glass.log \
